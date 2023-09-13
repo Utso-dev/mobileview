@@ -192,9 +192,11 @@ position: relative;
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
 }
-
+.show{
+  display: block !important;
+}
 .icon-call{
-  display: none; 
+  display: none;
   margin-top: 10px;
   border-top: 1px solid var(--white);
   text-align: center;
@@ -211,7 +213,7 @@ position: relative;
   color: var(--white);
 }
 .icon-mail{
-   display: none; 
+  display: none;
   margin-top: 10px;
   border-top: 1px solid var(--white);
   text-align: center;
@@ -220,7 +222,8 @@ position: relative;
   display: block; 
 }
 .icon-locat{
-   display: none; 
+  
+  display: none;
   margin-top: 10px;
   border-top: 1px solid var(--white);
   text-align: center;
@@ -246,7 +249,8 @@ position: relative;
   cursor: pointer;
 }
 .icon-web{
-  display: none; 
+  
+  display: none;
   margin-top: 10px;
   border-top: 1px solid var(--white);
   text-align: center;

@@ -8,38 +8,43 @@ const locationNow = document.querySelector(".icon-locat")
  const web = document.querySelector(".webs")
 const webNow = document.querySelector(".icon-web")
 const Home = document.querySelector("#Home")
+const show = document.querySelector(".show")
 
 const overlay = document.querySelector(".content-overlay")
 const Textoverlay = document.querySelector(".text-overlay")
 const notification = document.querySelector(".notification")
 const menu = document.querySelector(".menu")
 const wifi = document.querySelector(".wifi")
+const n_to = document.querySelector(".Notification-to")
 
 call.addEventListener("click", function(){
-  callNow.style.display = "block";
-  mailNow.style.display = "none";
-  locationNow.style.display = "none";
-  webNow.style.display = "none";
+    callNow.classList.toggle("show")
+    locationNow.classList.remove("show")
+    webNow.classList.remove("show")
+    mailNow.classList.remove("show")
+    n_to.style.height = "55vh"
    
 })
 mail.addEventListener("click", function(){
- callNow.style.display = "none";
-  mailNow.style.display = "block";
-  locationNow.style.display = "none";
-  webNow.style.display = "none";
+  callNow.classList.remove("show")
+  locationNow.classList.remove("show")
+  webNow.classList.remove("show")
+  mailNow.classList.toggle("show")
+  n_to.style.height = "55vh"
 })
- loc.addEventListener("click", function(){
-   callNow.style.display = "none";
-  mailNow.style.display = "none";
-  locationNow.style.display = "block";
-  webNow.style.display = "none"; 
-  
+ loc.addEventListener("click", function(){ 
+    mailNow.classList.remove("show")
+    callNow.classList.remove("show")
+    webNow.classList.remove("show")
+    locationNow.classList.toggle("show")
+    n_to.style.height = "54vh"
   })
 web.addEventListener("click", function(){
- callNow.style.display = "none";
-  mailNow.style.display = "none";
-  locationNow.style.display = "none";
-  webNow.style.display = "block";
+  mailNow.classList.remove("show")
+  callNow.classList.remove("show")
+  locationNow.classList.remove("show")
+  webNow.classList.toggle("show")
+  n_to.style.height = "55vh"
 })
 
 const welcome=document.querySelector('.container')
