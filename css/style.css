@@ -8,8 +8,11 @@
 a{
   text-decoration: none;
 }
-ul,ol{
+dl, ol, ul {
   list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0rem;
+  padding-left: 0rem;
 }
 html,body{
   scroll-behavior: unset !important;
@@ -90,6 +93,7 @@ position: relative;
   -moz-transition: all linear .3s;
   -ms-transition: all linear .3s;
   -o-transition: all linear .3s;
+ 
 }
 .content-overlay{
   position: absolute;
@@ -102,6 +106,7 @@ position: relative;
   -moz-transition: all linear .3s;
   -ms-transition: all linear .3s;
   -o-transition: all linear .3s;
+  overflow-y: hidden;
 }
 .content-to{
   position: absolute;
@@ -194,6 +199,9 @@ position: relative;
   border-top: 1px solid var(--white);
   text-align: center;
 }
+.icon-call.active{
+  display: block; 
+}
 .icon-call h3{
   font-family: var(--roboto);
   font-weight: 400;
@@ -208,11 +216,17 @@ position: relative;
   border-top: 1px solid var(--white);
   text-align: center;
 }
+.icon-mail.active{
+  display: block; 
+}
 .icon-locat{
    display: none; 
   margin-top: 10px;
   border-top: 1px solid var(--white);
   text-align: center;
+}
+.icon-locat.active{
+   display: block; 
 }
 .icon-locat p{
   font-family: var(--roboto);
@@ -237,6 +251,10 @@ position: relative;
   border-top: 1px solid var(--white);
   text-align: center;
 }
+.icon-web.active{
+  display: block; 
+
+}
 .icon-web h3{
   font-family: var(--roboto);
   font-weight: 400;
@@ -247,7 +265,7 @@ position: relative;
 }
 
 
-.home-icon a i{
+.home-icon li a i{
   color:var(--blu);
   font-size: 30px;
   transition: all linear .3s;
@@ -255,6 +273,10 @@ position: relative;
   -moz-transition: all linear .3s;
   -ms-transition: all linear .3s;
   -o-transition: all linear .3s;
+}
+.home-icon li.active a i{
+  color:var(--white);
+ 
 }
 .home-icon a i:hover{
   color:var(--white);
@@ -287,32 +309,16 @@ position: relative;
 }
   
 .notification{
-  margin-top: 20px;
-  overflow: scroll;
-  height: 125px;
-  position: absolute;
-  bottom:0;
-  left: 0;
-  width: 100%;
+  margin-top: 18px;
+  max-height:0vh;
+  
 }
-.notification-hight{
-  position: absolute;
-  margin-top: 20px;
-  overflow: scroll;
-  height: 70%;
-  bottom:0;
-  left: 0;
-  width: 100%;
-}
-.Notification-to{
-  margin-top: 20px;
-  overflow: scroll;
-  height: 80%;
-  position: absolute;
-  bottom:0;
-  left: 0;
-  width: 100%;
-}
+
+ .Notification-to{
+  margin-top: 18px;
+  overflow-y: auto;
+  max-height: 60vh;
+}  
 .notification-item{
   margin-bottom: 10px;
   background-color: var(--lowBlack);
@@ -410,7 +416,7 @@ position: relative;
   margin-bottom: 5px;
 }
 
-@media (min-width: 320px) and (max-width: 360.99px) {
+ @media (min-width: 320px) and (max-width: 360.99px) {
   .menu a {
     font-size: 14px;
 }
@@ -444,9 +450,7 @@ position: relative;
 .icon-web h3 {
   font-size: 18px;
 }
-.Notification-to {
-  height: 76%;
-}
+
   .home-button button {
     font-size: 12px;
     padding: 8px 27px;
@@ -547,9 +551,6 @@ position: relative;
 .to {
   height: 84%;
 }
-.Notification-to {
-  height: 72% !important;
-}
 .icon-call h3 {
   font-size: 16px;
 }
@@ -572,9 +573,6 @@ position: relative;
 .to {
   height: 84%;
 }
-.Notification-to {
-  height: 73%;
-}
 
 .bio p {
 
@@ -593,16 +591,12 @@ position: relative;
 .to {
   height: 82%;
 }
-.Notification-to {
-  height: 73%;
-}
-
 .bio p {
 
   font-size: 18px;
   padding: 0 28px;
 }
-}
+} 
 /*
 @media (min-width: 426px)  {
   .mobile-pic{
